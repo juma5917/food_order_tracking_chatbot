@@ -1,0 +1,237 @@
+{
+    "intents": [
+        {
+            "tag": "greeting",
+            "patterns": [
+                "Hi there",
+                "How are you",
+                "Is anyone there?",
+                "Hey",
+                "Hola",
+                "Hello",
+                "Good day"
+            ],
+            "responses": [
+                "Hello!",
+                "Good to see you again!",
+                "Hi there, how can I help you today?"
+            ],
+            "context": [
+                ""
+            ]
+        },
+        {
+            "tag": "goodbye",
+            "patterns": [
+                "Bye",
+                "See you later",
+                "Goodbye",
+                "Nice chatting with you, bye",
+                "Till next time"
+            ],
+            "responses": [
+                "See you!",
+                "Have a nice day!",
+                "Bye! Come back again soon."
+            ],
+            "context": [
+                ""
+            ]
+        },
+        {
+            "tag": "thanks",
+            "patterns": [
+                "Thanks",
+                "Thank you",
+                "That's helpful",
+                "Awesome, thanks",
+                "Thanks for helping me"
+            ],
+            "responses": [
+                "My pleasure!",
+                "You're welcome!"
+            ],
+            "context": [
+                ""
+            ]
+        },
+        {
+            "tag": "order_status",
+            "patterns": [
+                "What's the status of my order?",
+                "Where is my food?",
+                "How long will my delivery take?",
+                "Can you track my order?"
+            ],
+            "responses": [
+                "Let me check the status of your order. Can you provide your order number?",
+                "Your food is on its way!",
+                "It looks like your delivery will take another 30 minutes."
+            ],
+            "context": [
+                ""
+            ]
+        },
+        {
+            "tag": "menu",
+            "patterns": [
+                "What's on the menu?",
+                "What do you serve?",
+                "Can I see the menu?",
+                "What food items do you have?"
+            ],
+            "responses": [
+                "We have a variety of dishes including pizzas, burgers, salads, and desserts. What would you like to know more about?",
+                "Our menu includes a wide range of options like pasta, sushi, sandwiches, and more. What are you in the mood for?"
+            ],
+            "context": [
+                ""
+            ]
+        },
+        {
+            "tag": "restaurant_info",
+            "patterns": [
+                "Where are you located?",
+                "What are your opening hours?",
+                "Can I dine in?",
+                "Do you offer takeaway?"
+            ],
+            "responses": [
+                "We are located at 123 Food Street. We are open from 10 AM to 10 PM every day.",
+                "Yes, you can dine in or order takeaway. Our address is 123 Food Street, and we are open from 10 AM to 10 PM."
+            ],
+            "context": [
+                ""
+            ]
+        },
+        {
+            "tag": "dietary_restrictions",
+            "patterns": [
+                "Do you have vegetarian options?",
+                "Is there a gluten-free menu?",
+                "Do you cater to vegans?",
+                "Are there any nut-free dishes?"
+            ],
+            "responses": [
+                "Yes, we have a variety of vegetarian and vegan options. Would you like to hear about our gluten-free dishes?",
+                "We offer a range of dishes that cater to different dietary restrictions including vegetarian, vegan, gluten-free, and nut-free options."
+            ],
+            "context": [
+                ""
+            ]
+        },
+        {
+            "tag": "recommendation",
+            "patterns": [
+                "What do you recommend?",
+                "What's the best dish?",
+                "Can you suggest something?",
+                "What's popular here?"
+            ],
+            "responses": [
+                "I recommend our chef's special pizza. It's a customer favorite!",
+                "You should try our signature burger. It's very popular among our customers.",
+                "Our sushi platter is highly recommended if you enjoy Japanese cuisine."
+            ],
+            "context": [
+                ""
+            ]
+        },
+        {
+            "tag": "allergies",
+            "patterns": [
+                "Does this dish contain nuts?",
+                "I'm allergic to dairy, can I eat this?",
+                "Are there any eggs in this?",
+                "Is this gluten-free?"
+            ],
+            "responses": [
+                "Let me check the ingredients for you. Can you specify which dish you're asking about?",
+                "We can customize some dishes to accommodate your allergies. Please let us know your specific requirements."
+            ],
+            "context": [
+                ""
+            ]
+        },
+        {
+            "tag": "chef_special",
+            "patterns": [
+                "What's the chef's special?",
+                "Do you have any special dishes?",
+                "What's today's special?",
+                "Any recommendations from the chef?"
+            ],
+            "responses": [
+                "Today's special is the truffle mushroom risotto. It's a must-try!",
+                "Our chef recommends the grilled salmon with lemon butter sauce. It's a perfect choice for today."
+            ],
+            "context": [
+                ""
+            ]
+        },
+        {
+            "tag": "cuisine_types",
+            "patterns": [
+                "What cuisines do you offer?",
+                "Do you have Italian food?",
+                "Can I get Chinese here?",
+                "What types of food do you serve?"
+            ],
+            "responses": [
+                "We offer a variety of cuisines including Italian, Chinese, Indian, and Mexican. What are you interested in?",
+                "Our menu features dishes from various cuisines such as Italian pasta, Chinese dumplings, Indian curries, and Mexican tacos."
+            ],
+            "context": [
+                ""
+            ]
+        },
+        {
+            "tag": "payment_methods",
+            "patterns": [
+                "What payment methods do you accept?",
+                "Can I pay with a credit card?",
+                "Do you take online payments?",
+                "Is cash accepted?"
+            ],
+            "responses": [
+                "We accept various payment methods including credit cards, debit cards, online payments, and cash.",
+                "Yes, you can pay using credit cards, debit cards, online payment platforms, and cash."
+            ],
+            "context": [
+                ""
+            ]
+        },
+        {
+            "tag": "reservation",
+            "patterns": [
+                "Can I make a reservation?",
+                "Do you take reservations?",
+                "How can I book a table?",
+                "Can I reserve a table for tonight?"
+            ],
+            "responses": [
+                "Yes, we take reservations. You can book a table through our website or call us directly.",
+                "To make a reservation, please visit our website or contact us at (123) 456-7890."
+            ],
+            "context": [
+                ""
+            ]
+        },
+        {
+            "tag": "cooking_time",
+            "patterns": [
+                "How long does it take to prepare this dish?",
+                "What's the cooking time for the pasta?",
+                "When will my order be ready?",
+                "How much time for the pizza?"
+            ],
+            "responses": [
+                "The cooking time for this dish is approximately 20 minutes.",
+                "It usually takes around 15 minutes to prepare the pasta. Your order will be ready soon!"
+            ],
+            "context": [
+                ""
+            ]
+        }
+    ]
+}

@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JumaBOT</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+    <style>
+        body {
+            background: #5e5b5b;
+            padding: 20px;
+        }
+        .chat-container {
+            max-width: 600px;
+            margin: auto;
+            background: rgb(211, 86, 86);
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+        .chat-box {
+            max-height: 400px;
+            overflow-y: auto;
+        }
+        .user, .bot {
+            padding: 10px;
+            border-radius: 10px;
+            margin-bottom: 10px;
+        }
+        .user {
+            background: #e0e0e0;
+            text-align: right;
+        }
+        .bot {
+            background: #1f2122;
+            color: white;
+            text-align: left;
+        }
+    </style>
+</head>
+<body>
+    <div class="chat-container">
+        <h2 class="text-center">JumaBOT</h2>
+        <div class="chat-box" id="chat-box"></div>
+        <input id="user-input" type="text" class="form-control" placeholder="Message JumaBOT...">
+        <button class="btn btn-primary btn-block mt-2" id="send-btn" style="background-color: #1f2122;" >Send</button>
+    </div>
+
+    <script>
+        document.getElementById("send-btn").addEventListener("click", function() {
+    var userInput = document.getElementById("user-input").value;
+    if (userInput.trim() === "") {
+        return;
+    }
+
+    var chatBox = document.getElementById("chat-box");
+    var userDiv = document.createElement("div");
+    userDiv.className = "user";
+    userDiv.innerText = userInput;
+    chatBox.appendChild(userDiv);
+
+    fetch("/get", {
+        method: "POST",
+        headers: {
+            "Content-Type": "application/x-www-form-urlencoded",
+        },
+        body: "msg=" + userInput
+    })
+    .then(response => response.json())
+    .then(data => {
+        var botDiv = document.createElement("div");
+        botDiv.className = "bot";
+        botDiv.innerText = data.response;
+        chatBox.appendChild(botDiv);
+        chatBox.scrollTop = chatBox.scrollHeight;
+        document.getElementById("user-input").value = "";  // Clear the input field
+    });
+});
+
+    </script>
+</body>
+</html>
